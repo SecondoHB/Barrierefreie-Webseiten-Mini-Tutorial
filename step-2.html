@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 2 – Navigation & Skip-Link</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="step-1.html">1. HTML Struktur</a></li>
+            <li><a href="step-2.html" aria-current="page">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li><a href="step-4.html">4. Accessibility</a></li>
+            <li><a href="step-5.html">5. Komponenten</a></li>
+            <li><a href="step-6.html">6. Animation</a></li>
+            <li><a href="step-7.html">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 2 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="28"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 28%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Navigation & Skip-Link</h1>
+
+          <p>
+            Eine gute Navigation ist nicht nur für Design wichtig, sondern vor
+            allem für die Bedienbarkeit. Besonders Nutzer mit Tastatur oder
+            Screenreader profitieren davon.
+          </p>
+
+          <h2>Warum ist das wichtig?</h2>
+          <ul>
+            <li>Benutzer können sich schnell orientieren</li>
+            <li>Die Seite ist mit der Tastatur bedienbar</li>
+            <li>Screenreader verstehen die Navigation besser</li>
+          </ul>
+
+          <h2>Beispiel Navigation</h2>
+
+          <pre><code>&lt;nav aria-label="Hauptnavigation"&gt;
+  &lt;a href="index.html"&gt;Start&lt;/a&gt;
+  &lt;a href="kontakt.html"&gt;Kontakt&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+          <h2>Was ist ein Skip-Link?</h2>
+
+          <p>
+            Ein Skip-Link ermöglicht es Nutzern, direkt zum Hauptinhalt zu
+            springen, ohne durch die gesamte Navigation tabben zu müssen.
+          </p>
+
+          <pre><code>&lt;a href="#main" class="skip-link"&gt;
+  Zum Inhalt springen
+&lt;/a&gt;</code></pre>
+
+          <p>
+            <strong>Probiere es aus:</strong> Drücke die Tab-Taste auf deiner
+            Tastatur.
+          </p>
+
+          <h2>Deine Aufgabe</h2>
+          <ul>
+            <li>Baue eine Navigation mit mindestens 2 Links</li>
+            <li>Füge einen Skip-Link hinzu</li>
+            <li>Teste die Seite nur mit der Tastatur (Tab-Taste)</li>
+          </ul>
+
+          <h2>Lösung</h2>
+
+          <details>
+            <summary>Klicke hier, um die Lösung zu sehen</summary>
+
+            <pre><code>&lt;a href="#main" class="skip-link"&gt;Zum Inhalt springen&lt;/a&gt;
+
+&lt;nav aria-label="Hauptnavigation"&gt;
+  &lt;a href="index.html"&gt;Start&lt;/a&gt;
+  &lt;a href="kontakt.html"&gt;Kontakt&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main id="main"&gt;
+  &lt;h1&gt;Inhalt&lt;/h1&gt;
+&lt;/main&gt;</code></pre>
+          </details>
+
+          <h2>Checkliste</h2>
+          <ul>
+            <li>Navigation vorhanden</li>
+            <li>aria-label gesetzt</li>
+            <li>Skip-Link vorhanden</li>
+            <li>Seite mit Tab-Taste bedienbar</li>
+          </ul>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-1.html">← Zurück</a>
+          <a href="step-3.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

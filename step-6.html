@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 6 – Animation & UX</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="step-1.html">1. HTML Struktur</a></li>
+            <li><a href="step-2.html">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li><a href="step-4.html">4. Accessibility</a></li>
+            <li><a href="step-5.html">5. Komponenten</a></li>
+            <li><a href="step-6.html" aria-current="page">6. Animation</a></li>
+            <li><a href="step-7.html">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 6 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="84"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 84%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Animation & UX</h1>
+
+          <p>
+            Animationen können helfen, Aufmerksamkeit zu lenken – aber nur, wenn
+            sie bewusst eingesetzt werden.
+          </p>
+
+          <h2>Warum Animationen überhaupt?</h2>
+          <ul>
+            <li>Sie helfen beim Fokus auf Inhalte</li>
+            <li>Sie machen Übergänge verständlicher</li>
+            <li>Sie verbessern das Nutzergefühl</li>
+          </ul>
+
+         
+          <h2>Das Problem bei Animationen</h2>
+
+          <ul>
+            <li>Zu viel Bewegung → verwirrend</li>
+            <li>Flackernde Inhalte → schlecht für Fokus</li>
+            <li>Unkontrollierte Effekte → Barriereproblem</li>
+          </ul>
+
+          <h2>Die richtige Lösung: prefers-reduced-motion</h2>
+
+          <p>
+            Manche Nutzer möchten keine Animationen sehen (z. B.
+            gesundheitlich):
+          </p>
+
+          <pre><code>@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fadeInUp 0.8s ease-out;
+  }
+}</code></pre>
+
+<h2>Wie eine Animation funktioniert</h2>
+
+          <pre><code>@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}</code></pre>
+
+          <p>Inhalte erscheinen sanft von unten – nicht abrupt.</p>
+
+          <h2>Wann Animation sinnvoll ist</h2>
+
+          <ul>
+            <li>Beim Laden von Inhalten</li>
+            <li>Bei Karten oder Sections</li>
+            <li>Bei kleinen UI-Feedbacks (Hover, Fokus)</li>
+          </ul>
+
+          <h2>Wann Animation schlecht ist</h2>
+
+          <ul>
+            <li>Dauerhafte Bewegung im Hintergrund</li>
+            <li>Automatische Slides ohne Kontrolle</li>
+            <li>Wichtige Inhalte, die verschwinden</li>
+          </ul>
+
+          <h2>Checkliste</h2>
+
+          <ul>
+            <li>Animationen unterstützen Inhalte</li>
+            <li>Reduced Motion ist berücksichtigt</li>
+            <li>UX bleibt auch ohne Animation gut</li>
+          </ul>
+
+          <h2>Nächster Schritt</h2>
+          <p>Weiter zu Schritt 7 (Testing & Abschluss)</p>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-5.html">← Zurück</a>
+          <a href="step-7.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

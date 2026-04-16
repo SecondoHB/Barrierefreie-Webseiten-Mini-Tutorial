@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 1 – Semantisches HTML</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li>
+              <a href="step-1.html" aria-current="page">1. HTML Struktur</a>
+            </li>
+            <li><a href="step-2.html">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li><a href="step-4.html">4. Accessibility</a></li>
+            <li><a href="step-5.html">5. Komponenten</a></li>
+            <li><a href="step-6.html">6. Animation</a></li>
+            <li><a href="step-7.html">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 1 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="14"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 14%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Semantisches HTML</h1>
+
+          <p>
+            In diesem ersten Schritt lernst du, wie du eine Webseite logisch und
+            barrierefrei strukturierst.
+          </p>
+
+          <h2>Warum ist das wichtig?</h2>
+          <ul>
+            <li>Screenreader verstehen deine Seite besser</li>
+            <li>Suchmaschinen können Inhalte einordnen</li>
+            <li>Dein Code wird sauberer und wartbarer</li>
+          </ul>
+
+          <h2>Beispiel</h2>
+
+          <pre><code>&lt;header&gt;
+  &lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;Haupttitel&lt;/h1&gt;
+  &lt;p&gt;Inhalt&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+
+          <h2>Deine Aufgabe</h2>
+          <p>Baue eine kleine Seite nur mit semantischen HTML-Elementen:</p>
+
+          <ul>
+            <li>&lt;header&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;footer&gt;</li>
+          </ul>
+
+          <h2>Lösung</h2>
+
+          <details>
+            <summary>anzeigen</summary>
+
+            <pre><code>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;a href="#"&gt;Start&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;Meine erste Seite&lt;/h1&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2026&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+          </details>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-2.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

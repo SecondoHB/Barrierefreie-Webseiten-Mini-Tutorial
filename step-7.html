@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 7 – Testing & Abschluss</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="step-1.html">1. HTML Struktur</a></li>
+            <li><a href="step-2.html">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li><a href="step-4.html">4. Accessibility</a></li>
+            <li><a href="step-5.html">5. Komponenten</a></li>
+            <li><a href="step-6.html">6. Animation</a></li>
+            <li><a href="step-7.html" aria-current="page">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 7 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 100%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Testing & Abschluss</h1>
+
+          <p>
+            Eine gute Website ist nicht nur gebaut – sie ist getestet. Jetzt
+            prüfen wir, ob alles wirklich barrierefrei und nutzbar ist.
+          </p>
+
+          <h2>1. Tastatur-Test</h2>
+
+          <p>Nutze nur deine Tastatur (TAB, SHIFT + TAB, ENTER):</p>
+
+          <ul class="list-style-7">
+            <li>Kannst du alle Links erreichen?</li>
+            <li>Siehst du immer, wo du bist?</li>
+            <li>Kannst du alles ohne Maus bedienen?</li>
+          </ul>
+
+          <p><strong>Wenn nicht: Fokus-Styles prüfen!</strong></p>
+
+          <h2>2. Screenreader-Denken</h2>
+
+          <p>Stell dir vor, deine Seite wird nur vorgelesen:</p>
+
+          <ul class="list-style-7">
+            <li>Sind Überschriften logisch?</li>
+            <li>Macht die Reihenfolge Sinn?</li>
+            <li>Gibt es unnötige Inhalte?</li>
+          </ul>
+
+          <pre><code>H1 → Hauptthema
+H2 → Abschnitte
+H3 → Details</code></pre>
+
+          <h2>3. Mobile Test</h2>
+
+          <ul class="list-style-7">
+            <li>Ist alles auf kleinen Screens lesbar?</li>
+            <li>Ist die Navigation nutzbar?</li>
+            <li>Sind Buttons groß genug (min. 44px)?</li>
+          </ul>
+
+          <h2>4. Visueller Check</h2>
+
+          <ul class="list-style-7">
+            <li>Ist der Kontrast gut?</li>
+            <li>Sind Inhalte klar getrennt?</li>
+            <li>Ist die Seite nicht überladen?</li>
+          </ul>
+
+          <h2>5. Performance & Gefühl</h2>
+
+          <p>Gute Websites fühlen sich schnell und ruhig an.</p>
+
+          <ul class="list-style-7">
+            <li>Laden Inhalte schnell?</li>
+            <li>Ist Animation angenehm?</li>
+            <li>Ist alles klar strukturiert?</li>
+          </ul>
+
+         
+          <p>Du hast jetzt solides Grundwissen auf dem du aufbauen kannst.</p>
+
+          Mehr Informationen zur Web Accessibility Initiative des W3C
+
+          <a
+            href="https://www.w3.org/WAI/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link link--external"
+          >
+            Web Accessibility Initiative (WAI) – Richtlinien für barrierefreie
+            Websites
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-external"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <!-- Der Rahmen des Icons -->
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <!-- Der Pfeil -->
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+
+            <!-- Der Text NUR für Screenreader -->
+            <span class="sr-only">, öffnet in neuem Tab</span>
+          </a>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-6.html">← Zurück</a>
+          <a href="step-8.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

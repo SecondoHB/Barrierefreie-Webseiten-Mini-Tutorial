@@ -1,0 +1,499 @@
+/* =========================
+BASE RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+#main:focus {
+  outline: none; /* Verhindert unschöne Rahmen am Hauptcontainer nach dem Sprung */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f6f8fb;
+  color: #1a1f2b;
+}
+
+/* bessere Lesbarkeit */
+p,
+h1,
+h2,
+h3,
+a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.8rem;
+}
+
+a {
+  line-height: 1rem;
+}
+
+img {
+  width: 550px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+TYPO
+========================= */
+
+h2 {
+  margin-top: 0.5rem;
+}
+
+/* =========================
+LAYOUT
+========================= */
+
+.course-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+.course-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e6eaf0;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.course-sidebar h2 {
+  font-size: 1rem;
+}
+
+.course-sidebar a {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1a1f2b;
+}
+
+.course-sidebar a:hover,
+.course-sidebar a[aria-current="page"] {
+  background: #eaf1ff;
+  color: #2b6cff;
+}
+
+.course-sidebar a[aria-current="page"] {
+  border-left: 4px solid #2b6cff;
+}
+
+.course-sidebar a:focus-visible {
+  outline: 3px solid #2b6cff;
+  outline-offset: 2px;
+}
+
+.course-sidebar ul {
+  list-style: none; /* Entfernt die Punkte */
+  padding: 0;
+}
+
+.course-sidebar li {
+  margin: 0; /* Abstände regelst du ja schon über die Links */
+}
+
+/* =========================
+CONTENT
+========================= */
+
+.course-content {
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  min-width: 0;
+}
+
+.lesson-box {
+  background: white;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* =========================
+PROGRESS
+========================= */
+
+.progress {
+  font-size: 0.9rem;
+  color: #2b6cff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* =========================
+CODE BLOCKS
+========================= */
+
+pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* =========================
+SKIP LINK (A11Y)
+========================= */
+
+.skip-link {
+  position: absolute;
+  top: -100px; /* Standardmäßig weit außerhalb des Sichtfelds */
+  left: 0;
+  background: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000; /* Ganz oben über allen anderen Elementen */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 5px 0;
+  transition: top 0.2s ease; /* Sanftes Einblenden */
+}
+
+.skip-link:focus {
+  top: 0; /* Springt bei Tab-Fokus ins Sichtfeld */
+  outline: 3px solid orange; /* Deutlicher Fokus-Ring für Tastaturnutzer */
+}
+
+/* global focus */
+:focus-visible {
+  outline: 3px solid #2b6cff;
+  outline-offset: 2px;
+}
+
+/* =========================
+NAV
+========================= */
+
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.lesson-nav a {
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e6eaf0;
+  background: white;
+  color: #1a1f2b;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lesson-nav a:hover {
+  background: #2b6cff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =========================
+PROGRESS BAR
+========================= */
+
+.progress-bar {
+  height: 8px;
+  background: #e6eaf0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: linear-gradient(90deg, #2b6cff, #1f4fd6);
+}
+
+/* =========================
+INDEX
+========================= */
+
+.course-header {
+  background: linear-gradient(135deg, #2b6cff, #1f4fd6);
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.course-header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.course-header h1 {
+  color: #f6efef;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.15px;
+}
+
+.course-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.course-home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-home .card {
+  background: white;
+  border: 1px solid #e6eaf0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+CTA BUTTON
+========================= */
+
+.cta-button {
+  line-height: 1.2;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  background: linear-gradient(135deg, #2b6cff, #1f4fd6);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(43, 108, 255, 0.25);
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid #facc6e;
+  outline-offset: 3px;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(43, 108, 255, 0.3);
+}
+.cta-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-button {
+    transition: none;
+  }
+}
+
+/* =========================
+UTILITY LISTS
+========================= */
+
+.list {
+  padding-left: 1.25rem;
+}
+
+/* =========================
+ACCESSIBLE LINKS (NEU SYSTEM)
+========================= */
+
+.link {
+  color: #005fcc;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:visited {
+  color: #4b2a7a;
+}
+
+.link:focus-visible {
+  outline: 2px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Grundzustand des Links */
+.link--external {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+  color: #0066cc; /* Deine Linkfarbe */
+}
+
+/* Grundzustand des Icons */
+.icon-external {
+  width: 18px;
+  height: 18px;
+  /* Die Transition sorgt dafür, dass die Bewegung weich ist */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Animation beim Hover über den LINK */
+.link--external:hover .icon-external,
+.link--external:focus .icon-external {
+  /* Bewegt das Icon 3px nach rechts und 3px nach oben */
+  transform: translate(3px, -3px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%); /* Ergänzung für moderne Browser */
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Grundabstände für den Content-Bereich */
+.lesson-box > * + * {
+  margin-top: 1.5rem; /* Standard-Abstand zwischen allen Elementen */
+}
+
+/* Spezifische Abstände für Überschriften */
+h1,
+h2,
+h3 {
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 0.5rem; /* Kleiner Abstand zum Text darunter */
+}
+
+/* H1 (Seitentitel) */
+h1 {
+  font-size: 2rem;
+  margin-top: 0; /* Ganz oben bündig */
+}
+
+/* H2 (Neue Abschnitte) */
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem; /* Deutlicher Abstand nach oben, um ein neues Kapitel zu markieren */
+  border-bottom: 2px solid #eee; /* Optionale Trennlinie für klare Struktur */
+  padding-bottom: 0.3rem;
+}
+
+/* H3 (Unterpunkte) */
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #555; /* Etwas dezenter als h1 und h2 */
+}
+
+/* Listen und Absätze */
+p,
+ul {
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE DESIGN: Für Handys und Tablets */
+@media (max-width: 768px) {
+  img {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .course-layout {
+    grid-template-columns: 1fr; /* Nur noch eine Spalte */
+  }
+
+  .course-sidebar {
+    height: auto; /* Sidebar soll am Handy nicht den ganzen Bildschirm füllen */
+    position: relative; /* Sticky am Handy meistens störend, daher normaler Fluss */
+    border-right: none;
+    border-bottom: 1px solid #e6eaf0;
+    padding: 1rem;
+  }
+
+  .course-content {
+    padding: 1rem; /* Weniger Rand auf schmalen Handys */
+  }
+
+  .lesson-box {
+    padding: 1.5rem; /* Box-Abstände leicht reduzieren */
+  }
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 0.25rem 1.5rem;
+  border-top: 1px solid #e6eaf0;
+  background: linear-gradient(to bottom, #ffffff, #f7f9fc);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: #1a1f2b;
+  text-decoration: underline;
+  outline: 3px solid #facc6e;
+  outline-offset: 3px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* wichtig für mobile! */
+  text-align: center;
+}
+
+.footer-row nav {
+  display: flex;
+  gap: 0.75rem;
+}

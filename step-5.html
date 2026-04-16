@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 5 – Komponenten bauen</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="step-1.html">1. HTML Struktur</a></li>
+            <li><a href="step-2.html">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li><a href="step-4.html">4. Accessibility</a></li>
+            <li>
+              <a href="step-5.html" aria-current="page">5. Komponenten</a>
+            </li>
+            <li><a href="step-6.html">6. Animation</a></li>
+            <li><a href="step-7.html">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+ <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 5 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="70"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 70%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Komponenten bauen</h1>
+
+          <p>
+            Moderne Webseiten bestehen nicht aus einzelnen Seiten, sondern aus
+            wiederverwendbaren Bausteinen – sogenannten Komponenten.
+          </p>
+
+          <h2>Was ist eine Komponente?</h2>
+
+          <p>Eine Komponente ist ein wiederverwendbarer Baustein wie:</p>
+
+          <ul>
+            <li>Buttons</li>
+            <li>Karten (Cards)</li>
+            <li>Navigation</li>
+            <li>Container / Grid</li>
+          </ul>
+
+          <h2>Beispiel: Card-Komponente</h2>
+
+          <p>Du nutzt bereits ein sehr gutes Card-System:</p>
+
+          <pre><code>.card {
+  background: #f6f8fb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e6eaf0;
+}</code></pre>
+
+          <p><strong>Das ist bereits eine echte UI-Komponente!</strong></p>
+
+          <h2>Warum ist das wichtig?</h2>
+
+          <ul>
+            <li>Du kannst Elemente mehrfach verwenden</li>
+            <li>Design bleibt überall konsistent</li>
+            <li>Code wird einfacher wartbar</li>
+          </ul>
+
+          <h2>Beispiel: Button-Komponente</h2>
+
+          <p>Dein CTA-Button ist ebenfalls eine Komponente:</p>
+
+          <pre><code>a.cta-button {
+  display: inline-block;
+  background: #1f5edc;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 12px;
+}</code></pre>
+
+          <p>Egal wo du ihn nutzt – er sieht immer gleich aus.</p>
+
+          <h2>Beispiel: Grid-System</h2>
+
+          <p>Du hast ein flexibles Layout gebaut:</p>
+
+          <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}</code></pre>
+
+          <p>Das ist dein Layout-System für alle Cards.</p>
+
+          <h2>Deine Aufgabe</h2>
+
+          <ul>
+            <li>Identifiziere 3 Komponenten auf deiner Website</li>
+            <li>Überlege: Wo kannst du sie wiederverwenden?</li>
+            <li>Teste, ob alles konsistent aussieht</li>
+          </ul>
+
+          <h2>Lösung anzeigen</h2>
+
+          <details>
+            <summary>Klicke hier für Beispiele</summary>
+
+            <h3>Komponenten-Beispiele</h3>
+
+            <ul>
+              <li><strong>Button</strong> → CTA überall gleich</li>
+              <li><strong>Card</strong> → gleiche Struktur für Inhalte</li>
+              <li>
+                <strong>Grid</strong> → Layout-System für mehrere Bereiche
+              </li>
+            </ul>
+          </details>
+          <h2>Checkliste</h2>
+
+          <ul>
+            <li>Du erkennst wiederverwendbare Elemente</li>
+            <li>Styles sind konsistent</li>
+            <li>Du denkst in Komponenten, nicht in Seiten</li>
+          </ul>
+
+          <h2>Nächster Schritt</h2>
+          <p>Weiter zu Schritt 6 (Animation & UX)</p>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-4.html">← Zurück</a>
+          <a href="step-6.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

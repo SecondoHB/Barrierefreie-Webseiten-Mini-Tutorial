@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schritt 4 – Barrierefreiheit Basics</title>
+    <link rel="stylesheet" href="css/course.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="course-layout">
+      <!-- SIDEBAR -->
+      <aside class="course-sidebar">
+        <h2>📚 Kurs</h2>
+
+        <nav aria-label="Kursnavigation">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="step-1.html">1. HTML Struktur</a></li>
+            <li><a href="step-2.html">2. Navigation</a></li>
+            <li><a href="step-3.html">3. Mobile First</a></li>
+            <li>
+              <a href="step-4.html" aria-current="page">4. Accessibility</a>
+            </li>
+            <li><a href="step-5.html">5. Komponenten</a></li>
+            <li><a href="step-6.html">6. Animation</a></li>
+            <li><a href="step-7.html">7. Testing</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+ <!-- CONTENT -->
+      <main class="course-content" id="main" tabindex="-1">
+        <!-- ID hinzufügen für die Verknüpfung -->
+        <div class="progress" id="progress-title">Schritt 4 von 7</div>
+
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-labelledby="progress-title"
+            aria-valuenow="56"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" style="width: 56%"></div>
+          </div>
+        </div>
+
+        <div class="lesson-box">
+          <h1>Barrierefreiheit Basics</h1>
+
+          <p>
+            Barrierefreiheit bedeutet, dass wirklich alle Menschen deine Website
+            nutzen können – unabhängig von Einschränkungen oder Geräten.
+          </p>
+
+          <h2>1. Warum Barrierefreiheit wichtig ist</h2>
+          <ul>
+            <li>Nutzer mit Screenreader können Inhalte verstehen</li>
+            <li>Tastatur-Nutzer können alles bedienen</li>
+            <li>Inhalte bleiben auch bei schlechter Sicht lesbar</li>
+          </ul>
+
+          <h2>2. Alt-Texte richtig schreiben</h2>
+
+          <p>Bilder brauchen eine Beschreibung für Screenreader:</p>
+
+          <pre><code>&lt;img src="hund.jpg" alt="Ein Hund läuft entspannt an der Leine in Wien"&gt;</code></pre>
+
+          <p><strong>schlecht:</strong> "hund123.jpg" oder "Bild"</p>
+          <p><strong>gut:</strong> Das Bild beschreibende & sinnvolle Texte</p>
+
+          <h2>3. Fokus sichtbar machen</h2>
+
+          <p>Nutzer mit Tastatur brauchen klare Orientierung:</p>
+
+          <pre><code>a:focus-visible {
+  outline: 3px solid #2b6cff;
+  outline-offset: 3px;
+}</code></pre>
+
+          <h2>4. Kontrast ist entscheidend</h2>
+
+          <ul>
+            <li>Hellgrau auf Weiß = schlecht</li>
+            <li>Dunkelblau auf Weiß = gut</li>
+            <li>Deine CTA Buttons sind bereits gut lesbar</li>
+          </ul>
+
+          <h2>5. Screenreader denken</h2>
+
+          <p>
+            Screenreader lesen HTML linear vor. Deshalb ist Struktur wichtig:
+          </p>
+
+          <pre><code>&lt;h1&gt;Haupttitel&lt;/h1&gt;
+&lt;h2&gt;Untertitel&lt;/h2&gt;
+&lt;h3&gt;Details&lt;/h3&gt;</code></pre>
+
+          <p><strong>Keine Sprünge in der Reihenfolge!</strong></p>
+
+        
+          <h2>Checkliste</h2>
+          <ul>
+            <li>Bilder haben sinnvolle Alt-Texte</li>
+            <li>Fokus ist sichtbar</li>
+            <li>Kontrast ist ausreichend</li>
+            <li>Struktur ist logisch (H1 → H2 → H3)</li>
+          </ul>
+
+          <h2>Nächster Schritt</h2>
+          <p>Weiter zu Schritt 5 (Komponenten bauen)</p>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="step-3.html">← Zurück</a>
+          <a href="step-5.html">Weiter →</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
